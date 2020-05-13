@@ -13,10 +13,11 @@ namespace HelloWorldTests
         {
             //Arrange
             string expectedMessage = "Hello World!";
-            var message = new Message("Hello World!");
+            var message = new Message();
+            message.MyMessage = "Hello World!";
 
             //Act
-            string actualMessage = message.GetMyMessage();
+            string actualMessage = message.MyMessage;
 
             //Assert
             Assert.AreEqual(expectedMessage, actualMessage, "Invalid Message");
@@ -27,10 +28,11 @@ namespace HelloWorldTests
         {
             //Arrange
             string expecMsg = "Hello World!";
-            var msg = new Message("Helllll");
+            var msg = new Message();
+            msg.MyMessage = "Helllll";
 
             //Act
-            string actMsg = msg.GetMyMessage();
+            string actMsg = msg.MyMessage;
 
             //Assert
             Assert.AreNotEqual(expecMsg, actMsg, "Invalid Message");

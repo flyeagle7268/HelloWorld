@@ -10,14 +10,9 @@ namespace HelloWorld
     {
         private string _message;
 
-        public Message(string message)
-        {
-            _message = message;
-        }
-
-        public string GetMyMessage()
-        {
-            return _message;
+        public string MyMessage {
+            get => _message;
+            set => _message = value;
         }
     }
 }
